@@ -19,3 +19,9 @@ Este proyecto es un clon de ciertas funcionalidades de WhatsApp Web.
 - Bootstrap Icons 
 - CSS
 
+## Vercel
+https://tp-final-whatsapp.vercel.app/
+
+## GitHub
+https://github.com/GabrielaGorza/TP_FINAL_WHATSAPP.git
+
