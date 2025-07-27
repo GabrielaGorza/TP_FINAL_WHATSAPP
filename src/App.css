@@ -1,0 +1,119 @@
+.app-container {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background-color: #161717;
+    font-family: Helvetica
+}
+
+.left-panel {
+    width: 502px;
+    min-width: 502px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    border-right: 1px solid #2a3942;
+    overflow-y: auto;
+}
+
+.right-panel {
+    flex: 1;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-screen-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-image: url("/Images/WhatsApp-Wallpaper.png");
+    background-repeat: repeat;
+    background-size: 350px;
+    background-attachment: fixed;
+}
+
+/* RESPONSIVO */
+@media screen and (max-width: 1140px) {
+    .chat-header .icon-group {
+        gap: 8px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .left-panel {
+        flex: 1;
+        max-width: 100%;
+    }
+
+    .right-panel {
+        flex: 2;
+        max-width: 100%;
+    }
+
+    .chat-screen-container {
+        background-size: contain;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+
+    .left-panel,
+    .right-panel {
+        width: 100%;
+        height: auto;
+    }
+
+    .contact-name {
+        font-size: 14px;
+    }
+
+    .contact-lastSeen,
+    .contact-preview {
+        font-size: 12px;
+    }
+
+    .message-container {
+        padding: 6px 8px 16px 8px;
+    }
+}
+
+
+@media screen and (max-width: 480px) {
+    .photo-avatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .chat-header .icon-group i {
+        font-size: 16px;
+    }
+
+    .message-container {
+        padding: 4px 6px 12px 6px;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    html {
+        font-size: 13px;
+    }
+
+    .contact-name {
+        font-size: 13px;
+    }
+
+    .chat-header .icon-group {
+        gap: 4px;
+    }
+
+    .photo-avatar {
+        width: 36px;
+        height: 36px;
+    }
+}
