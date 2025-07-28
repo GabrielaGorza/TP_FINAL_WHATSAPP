@@ -117,3 +117,38 @@
         height: 36px;
     }
 }
+
+.chat-header-icons i {
+    display: inline-block;
+    color: white;
+    font-size: 20px;
+    margin-left: 12px;
+    cursor: pointer;
+}
+
+/* En móviles, ocultar todos excepto los tres puntos */
+@media screen and (max-width: 768px) {
+    .chat-header-icons i:not(.mobile-only) {
+        display: none;
+    }
+
+    .mobile-only {
+        display: inline-block;
+    }
+
+    .left-panel {
+        display: none;
+    }
+
+    .left-panel.show {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%;
+        height: 100%;
+        background-color: #202020;
+        z-index: 10;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    }
+}

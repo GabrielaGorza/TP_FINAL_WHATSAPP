@@ -22,6 +22,12 @@ const ChatScreen = () => {
 
   const [contactSelected, setContactSelected] = useState(null);
   const [messages, setMessages] = useState([]);
+  const toggleLeftPanel = () => {
+    const panel = document.querySelector(".left-panel");
+    if (panel) {
+      panel.classList.toggle("show");
+    }
+  };
 
   useEffect(() => {
     const updatedContact = getContactById(Number(contact_id));
@@ -62,7 +68,7 @@ const ChatScreen = () => {
           <i className="bi bi-chevron-down"></i>
           <i className="bi bi-shop-window"></i>
           <i className="bi bi-search"></i>
-          <i className="bi bi-three-dots-vertical"></i>
+          <i className="bi bi-three-dots-vertical mobile-only" onClick={toggleLeftPanel}></i>
         </div>
       </div>
 
